@@ -1,22 +1,19 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { RouterPathEnum } from '../App';
+import './Header.css';
+import { RouterPathEnum } from '../../enums/RouterPathEnum';
 
-export interface Props {
-  
-}
-
-class Header extends React.Component<Props, {}> {
-  constructor(props : Props){
+class Header extends React.Component<React.Props<Header>, {}> {
+  constructor(props : React.Props<Header>){
     super(props);
   }
 
   render() {
     return(
-      <ul>
+      <ul className='ulContainer'>
         <li><Link to={ RouterPathEnum.HOME }>home</Link></li>
         <li><Link to={ RouterPathEnum.ABOUT }>about</Link></li>
-        <li><Link to={ RouterPathEnum.BOARD }>board</Link></li>
+        <li><Link to={ RouterPathEnum.MEMBER }>member</Link></li>
       </ul>
     );
   }

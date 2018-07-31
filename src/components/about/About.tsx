@@ -1,12 +1,8 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 
-export interface Props extends RouteComponentProps<About> {
-  
-}
-
-class About extends React.Component<Props, {}> {
-  constructor(props : Props){
+class About extends React.Component<RouteComponentProps<About>, {}> {
+  constructor(props : RouteComponentProps<About>){
     super(props);
   }
 
@@ -14,8 +10,7 @@ class About extends React.Component<Props, {}> {
     return(
       <div>
         <h2>about</h2>
-        <button 
-          onClick={ ( e: any ) => this.props.history.goBack() }>
+        <button onClick={ ( e: any ) => this.props.history.goBack() }>
             go back
         </button>
       </div>

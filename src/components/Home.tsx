@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
-import { RouterPathEnum } from '../App';
+import { RouterPathEnum } from '../enums/RouterPathEnum';
 
-export interface Props extends RouteComponentProps<Home> {
-  
-}
-
-class Home extends React.Component<Props, {}> {
-  constructor(props : Props){
+class Home extends React.Component<RouteComponentProps<Home>, {}> {
+  constructor(props : RouteComponentProps<Home>){
     super(props);
 
     this.onClickMove = this.onClickMove.bind( this );
@@ -17,14 +13,12 @@ class Home extends React.Component<Props, {}> {
     return(
       <div>
         <h2>home</h2>
-        <button 
-          onClick={ ( e: any ) => this.onClickMove( RouterPathEnum.ABOUT ) }>
+        <button onClick={ ( e: any ) => this.onClickMove( RouterPathEnum.ABOUT ) }>
             go about
         </button>
         &nbsp;
-        <button 
-          onClick={ ( e: any ) => this.onClickMove( RouterPathEnum.BOARD ) }>
-            go board
+        <button onClick={ ( e: any ) => this.onClickMove( RouterPathEnum.MEMBER ) }>
+            go member
         </button>
       </div>
     );
