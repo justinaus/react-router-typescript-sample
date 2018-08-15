@@ -16,7 +16,7 @@ class Members extends React.Component<RouteComponentProps<Members>, IState> {
     this.state = { memberModelList: this.makeSampleMemberModels() };
   }
 
-  private makeSampleMemberModels(): MemberModel[] {
+  private makeSampleMemberModels = (): MemberModel[] => {
       const arrMembers: MemberModel[] = [];
       
       arrMembers.push( new MemberModel( 0, 'justin' ) );
@@ -33,7 +33,7 @@ class Members extends React.Component<RouteComponentProps<Members>, IState> {
       return this.getMemberModelById( this.state.memberModelList, Number( strId ) );
   }
 
-  private getMemberModelById( arr: MemberModel[], nId: number ): MemberModel | null {
+  private getMemberModelById = ( arr: MemberModel[], nId: number ): MemberModel | null => {
       var memberModel: MemberModel;
     
       for(var i: number=0; i<arr.length; ++i) {
