@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import { RouterPathEnum } from '../../enums/RouterPathEnum';
 import Member from './Member';
 
-export interface State {
+interface IState {
     memberModelList: MemberModel[];
 }
 
-class Members extends React.Component<RouteComponentProps<Members>, State> {
+class Members extends React.Component<RouteComponentProps<Members>, IState> {
   constructor(props : RouteComponentProps<Members>){
     super(props);
 

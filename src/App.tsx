@@ -7,11 +7,11 @@ import HeaderSmall from './components/header/HeaderSmall';
 import { RouterPathEnum } from './enums/RouterPathEnum';
 import Members from './components/member/Members';
 
-export interface State {
+interface IState {
   isSmallScreen: boolean;
 }
 
-class App extends React.Component<{}, State> {
+class App extends React.Component<{}, IState> {
   constructor(props : any){
     super(props);
 

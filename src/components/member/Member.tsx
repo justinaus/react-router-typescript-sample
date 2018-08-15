@@ -2,12 +2,12 @@ import * as React from 'react';
 import { RouteComponentProps } from 'react-router';
 import MemberModel from '../../models/MemberModel';
 
-export interface Props extends RouteComponentProps<Member> {
+interface IProps extends RouteComponentProps<Member> {
   memberModel: MemberModel | null;
 }
 
-class Member extends React.Component<Props, {}> {
-  constructor(props : Props){
+class Member extends React.Component<IProps, {}> {
+  constructor(props : IProps){
     super(props);
   }
 
