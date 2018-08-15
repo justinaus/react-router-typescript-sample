@@ -5,8 +5,6 @@ import { RouterPathEnum } from '../enums/RouterPathEnum';
 class Home extends React.Component<RouteComponentProps<Home>, {}> {
   constructor(props : RouteComponentProps<Home>){
     super(props);
-
-    this.onClickMove = this.onClickMove.bind( this );
   }
 
   render() {
@@ -24,7 +22,7 @@ class Home extends React.Component<RouteComponentProps<Home>, {}> {
     );
   }
 
-  private onClickMove( routerPathEnum: RouterPathEnum ):void {
+  private onClickMove = ( routerPathEnum: RouterPathEnum ) => {
     this.props.history.push( routerPathEnum );
   }
 }

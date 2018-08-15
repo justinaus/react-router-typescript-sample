@@ -14,8 +14,6 @@ class Members extends React.Component<RouteComponentProps<Members>, IState> {
     super(props);
 
     this.state = { memberModelList: this.makeSampleMemberModels() };
-
-    this.getMemberModelFromUrl = this.getMemberModelFromUrl.bind( this );
   }
 
   private makeSampleMemberModels(): MemberModel[] {
@@ -28,7 +26,7 @@ class Members extends React.Component<RouteComponentProps<Members>, IState> {
       return arrMembers;
   }
 
-  private getMemberModelFromUrl(): MemberModel | null {
+  private getMemberModelFromUrl = (): MemberModel | null =>  {
       // i don't know how to get only :id. so..
       const strId: string = this.props.location.pathname.split( this.props.match.path + '/' )[1];
       

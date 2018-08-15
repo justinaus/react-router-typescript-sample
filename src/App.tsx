@@ -15,8 +15,6 @@ class App extends React.Component<{}, IState> {
   constructor(props : any){
     super(props);
 
-    this.updateDimensions = this.updateDimensions.bind( this );
-
     this.state = { isSmallScreen: false };
 }
   componentDidMount() {
@@ -28,7 +26,7 @@ class App extends React.Component<{}, IState> {
     window.removeEventListener("resize", this.updateDimensions);
   }
 
-  private updateDimensions(e: any):void {
+  private updateDimensions = (e: any) => {
     this.setState( { isSmallScreen: window.innerWidth < 500 } );
   }
 
